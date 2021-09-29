@@ -1,0 +1,6 @@
+create_table("events") {
+	t.Column("id", "uuid", {primary: true})
+	t.Column("content", "string", {"size": 5000})
+	t.Column("account_id", "string", {})
+	t.Timestamps()
+}

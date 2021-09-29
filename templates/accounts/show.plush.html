@@ -1,0 +1,45 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Account Details</h3>
+
+  <div class="float-right">
+    <%= linkTo(accountsPath(), {class: "btn btn-info"}) { %>
+      Back to all Accounts
+    <% } %>
+    <%= linkTo(editAccountPath({ account_id: account.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+    <%= linkTo(accountPath({ account_id: account.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+  </div>
+</div>
+
+
+
+<ul class="list-group mb-2 ">
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Email</label>
+    <p class="d-inline-block"><%= account.Email %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">LastName</label>
+    <p class="d-inline-block"><%= account.LastName %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">FirstName</label>
+    <p class="d-inline-block"><%= account.FirstName %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">InternalPartnerID</label>
+    <p class="d-inline-block"><%= account.InternalPartnerID %></p>
+  </li>
+
+
+</ul>

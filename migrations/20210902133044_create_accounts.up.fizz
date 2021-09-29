@@ -1,0 +1,8 @@
+create_table("accounts") {
+	t.Column("id", "uuid", {primary: true})
+	t.Column("email", "string", {})
+	t.Column("last_name", "string", {null: true})
+	t.Column("first_name", "string", {null: true})
+	t.Column("internal_partner_id", "string", {null: true})
+	t.Timestamps()
+}
