@@ -5,6 +5,7 @@ services:
         network_mode: bridge
         environment:
             - GO_ENV=production
+            - SESSION_SECRET=randomsecret
         restart: always
         volumes:
             - .env:/bin/.env
