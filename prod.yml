@@ -1,7 +1,4 @@
 version: '3.8'
-networks:
-  web:
-    external: true
 services:
     dfdemo:
         build: .
@@ -9,8 +6,8 @@ services:
             - GO_ENV=production
             - SESSION_SECRET=randomsecret
         restart: always
-        volumes:
-            - .env:/bin/.env
+        env_file:
+            - .env
         ports:
             - "3000:3000"
         labels:
@@ -18,5 +15,4 @@ services:
             - traefik.http.routers.blog.tls=true
             - traefik.http.routers.blog.tls.certresolver=lets-encrypt
             - traefik.port=80
-        networks:
-            - web
+        network_mode: bridge
