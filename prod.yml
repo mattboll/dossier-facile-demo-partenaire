@@ -7,7 +7,7 @@ services:
             - SESSION_SECRET=randomsecret
         restart: always
         env_file:
-            - .env
+            - .env/.env
         ports:
             - "3000:3000"
         labels:
