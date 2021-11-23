@@ -10,13 +10,14 @@
 
 <table class="table table-hover table-bordered">
   <thead class="thead-light">
-    <th>Content</th><th>AccountID</th>
+    <th>Content</th><th>AccountID</th><th>CreatedAt</th>
     <th>&nbsp;</th>
   </thead>
   <tbody>
     <%= for (event) in events { %>
       <tr>
         <td class="align-middle"><%= event.Content %></td><td class="align-middle"><%= event.AccountID %></td>
+        <td class="align-middle"><%= event.CreatedAt %></td>
         <td>
           <div class="float-right">
             <%= linkTo(eventPath({ event_id: event.ID }), {class: "btn btn-info", body: "View"}) %>
